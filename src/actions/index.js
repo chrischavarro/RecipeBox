@@ -1,12 +1,24 @@
 import axios from 'axios'
+export const FETCH_RECIPES = 'FETCH_RECIPES'
+export const CREATE_RECIPE = 'CREATE_RECIPE'
 
-const SEARCH_URL = `https://api.spotify.com/v1/search?`
-
-export function getArtist(searchTerm) {
-  const request = actions.get(`#{SEARCH_URL}/q=${searchTerm}`)
+export function getRecipes() {
+  const request = '';
 
   return {
-    type: FETCH_ARTISTS,
+    type: FETCH_RECIPES,
     payload: request
-  };
+  }
 }
+
+export function createRecipe(name, ingredients) {
+  const request = { name: name,
+                    ingredients: ingredients };
+  localStorage.setItem(key, result)
+  return {
+    type: CREATE_RECIPE,
+    payload: request
+  }
+}
+// Recipe - has name, ingredients info passed as props for ingredients object
+// Ingredients - rendered as table

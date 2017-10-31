@@ -1,8 +1,8 @@
-# ReduxSimpleStarter
+# Recipe Box
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This is a small beginner project I made using React as a FreeCodeCamp requirement.
 
-### Getting Started
+### What does it do?
 
 There are two methods for getting started with this repo.
 
