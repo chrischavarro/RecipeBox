@@ -5,7 +5,10 @@ import RecipeForm from '../containers/recipe_form';
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter
+      <div>
+      <div className="col-sm-12 header">
+        Welcome to RecipeBox!
+      </div>
         <RecipeList />
         <RecipeForm />
       </div>

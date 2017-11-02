@@ -17,8 +17,8 @@ class Recipe extends Component {
   }
   render() {
     return (
-      <div className="col-sm-10 recipe">
-        <div><a onClick={() => this.setState({ open: !this.state.open })}>{this.props.data.name}</a></div>
+      <div className="col-sm-12 col-sm-offset-1 recipe">
+        <div className="recipe-name"><a onClick={() => this.setState({ open: !this.state.open })}>{this.props.data.name}</a></div>
         <Collapse in={this.state.open}>
           <div className="ingredient-dropdown">
             <Well>

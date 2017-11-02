@@ -1,12 +1,50 @@
+.header {
+  font-size: 24pt!important;
+  text-align: center;
+}
+
+.add-recipe-button {
+  font-size: 22pt!important;
+  width: 100%;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
 .recipe-modal {
     border: 2px solid red;
     width: 40%;
 }
 
 .recipe {
-  background-color: #994636;
+  background-color: #372549;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .ingredient-dropdown {
-  background-color: #CA907E;
+  background-color: #64333A;
+  color: #EACDC2;
+}
+
+ul {
+  list-style-type: none!important;
+}
+
+a {
+  color: #B75D69!important;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  color: #774C60!important;
+  text-decoration: none!important;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.recipe {
+  text-align: center;
+  font-size: 22pt;
+  font-weight: 500;
 }

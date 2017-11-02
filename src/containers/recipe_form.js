@@ -42,8 +42,8 @@ class RecipeForm extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.openModal}>Add Recipe</button>
+      <div className="col-sm-4 col-sm-offset-4">
+        <button onClick={this.openModal} className="btn btn-primary add-recipe-button">Add Recipe</button>
         <Modal
           isOpen={this.state.modalOpen}
           onAfterOpen={this.afterOpenModal}

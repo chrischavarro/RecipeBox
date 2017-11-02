@@ -25,7 +25,7 @@ class RecipeList extends Component {
   render() {
     return (
       <div>
-        <div className="table table-hover">
+        <div className="col-sm-10">
             {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
         </div>
       </div>
