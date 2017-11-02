@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getRecipes } from '../actions';
+import Recipe from './recipe';
 
 class RecipeList extends Component {
   constructor(props) {
@@ -11,17 +12,25 @@ class RecipeList extends Component {
 
   componentDidMount() {
       {this.props.getRecipes}
+      for (var length in localStorage) {
+        console.log(length + ':' + localStorage[length].name)
+      }
   }
 
-  renderRecipes() {
-
+  renderRecipes(index, recipe) {
+    return (
+      <Recipe data={index} index={index} key={index} />
+    )
   }
 
   render() {
+
     return (
       <div>
         <table className="table table-hover">
-          {this.renderRecipes}
+          <tbody>
+            {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
+          </tbody>
         </table>
       </div>
     )

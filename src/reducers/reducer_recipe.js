@@ -1,11 +1,10 @@
-import { FETCH_RECIPES, CREATE_RECIPE } from '../actions';
+import { FETCH_RECIPES } from '../actions';
 
-export default function(state={}, action) {
+export default function(state=[], action) {
   switch (action.type) {
     case FETCH_RECIPES:
-      return action.payload.data;
-    case CREATE_RECIPE:
-      return action.payload.data;
+      console.log('Recipe recieved', action.payload);
+      return state.concat([ action.payload ]);
     default:
       return state;
   }
