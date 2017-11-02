@@ -14,25 +14,11 @@ export function getRecipes(name, ingredients) {
   }
 }
 
-export function createRecipe(name, ingredients) {
-
-  // indexer = localStorage.getItem(0)
-  const request = { name: name,
-                    ingredients: ingredients.split(','),
-                    key: indexer };
-  // localStorage.setItem(request.key, request);
-  // indexer++;
-  // localStorage.setItem(0, indexer);
-  console.log(request)
-  // console.log(localStorage.getItem(0))
-
-  return {
-    type: CREATE_RECIPE,
-    payload: request
-  }
-}
+// localStorage.setItem(request.key, request);
+// localStorage.setItem(0, indexer);
+// localStorage.clear();
+// console.log(localStorage.getItem(0))
 
 // store index variable in local storage
 // Recipe - has name, ingredients info passed as props for ingredients object
 // Ingredients - rendered as table
-// localStorage.clear();

@@ -6,7 +6,6 @@ import Recipe from './recipe';
 class RecipeList extends Component {
   constructor(props) {
     super(props)
-
     this.renderRecipes = this.renderRecipes.bind(this);
   }
 
@@ -17,20 +16,17 @@ class RecipeList extends Component {
       }
   }
 
-  renderRecipes(index, recipe) {
+  renderRecipes(recipe, index) {
     return (
-      <Recipe data={index} index={index} key={index} />
+      <Recipe data={recipe} index={index} key={recipe.name} />
     )
   }
 
   render() {
-
     return (
       <div>
         <div className="table table-hover">
-
             {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
-          
         </div>
       </div>
     )
