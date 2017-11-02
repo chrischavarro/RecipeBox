@@ -27,11 +27,11 @@ class RecipeList extends Component {
 
     return (
       <div>
-        <table className="table table-hover">
-          <tbody>
+        <div className="table table-hover">
+
             {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
-          </tbody>
-        </table>
+          
+        </div>
       </div>
     )
   };

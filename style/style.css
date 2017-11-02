@@ -2,3 +2,11 @@
     border: 2px solid red;
     width: 40%;
 }
+
+.recipe {
+  background-color: #994636;
+}
+
+.ingredient-dropdown {
+  background-color: #CA907E;
+}
