@@ -18,11 +18,11 @@ export function getRecipes(name, ingredients) {
   }
 }
 
-export function deleteRecipe(name, ingredients) {
+export function deleteRecipe(name, ingredients, index) {
   const request = {
     name: name,
     ingredients: ingredients,
-    key: name
+    index: index
   };
 
   return {

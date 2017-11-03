@@ -14,24 +14,24 @@ class RecipeList extends Component {
       {this.props.getRecipes}
   }
 
-  renderRecipes() {
-    return _.map(this.props.recipes), recipe => {
-      console.log(recipe)
-    }
-
-  }
-  // renderRecipes(recipe, index) {
-  //   console.log(recipe.index);
-  //   return (
-  //     <Recipe data={recipe} index={index} key={recipe.name} />
-  //   )
+  // renderRecipes() {
+  //   return _.map(this.props.recipes), recipe => {
+  //     console.log(recipe)
+  //   }
+  //
   // }
+  renderRecipes(recipe, index) {
+    console.log(this.props.recipes)
+    return (
+      <Recipe data={recipe} index={index} key={recipe.name} />
+    )
+  }
 
   render() {
     return (
       <div>
         <div className="col-sm-10">
-            {this.renderRecipes()}
+            {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
         </div>
       </div>
     )
@@ -45,4 +45,3 @@ function mapStateToProps(state) {
 }
 
 export default connect (mapStateToProps, { getRecipes })(RecipeList);
-// {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
