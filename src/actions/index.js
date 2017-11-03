@@ -10,24 +10,16 @@ export function getRecipes(name, ingredients) {
     key: name
   };
 
-  // localStorage.setItem(request.key, request);
-
   return {
     type: FETCH_RECIPES,
     payload: request
   }
 }
 
-export function deleteRecipe(name, ingredients, index) {
-  const request = {
-    name: name,
-    ingredients: ingredients,
-    index: index
-  };
-
+export function deleteRecipe(index) {
   return {
     type: DELETE_RECIPE,
-    payload: request
+    payload: index
   }
 }
 
@@ -39,3 +31,4 @@ export function deleteRecipe(name, ingredients, index) {
 // store index variable in local storage
 // Recipe - has name, ingredients info passed as props for ingredients object
 // Ingredients - rendered as table
+  // localStorage.setItem(request.key, request);

@@ -8,7 +8,7 @@ export default function(state=[], action) {
       return state.concat([ action.payload ]);
     case DELETE_RECIPE:
       console.log('Delete request received', action.payload);
-      return state.filter( (recipe, index) => index !== action.payload.index)
+      return state.filter( (recipe, index) => index !== action.payload)
     default:
       return state;
   }

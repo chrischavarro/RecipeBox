@@ -27,7 +27,7 @@ class Recipe extends Component {
               <ul className="list-group">
                 {this.props.data.ingredients.map((ingredient, index) => this.renderIngredients(ingredient, index))}
               </ul>
-              <button className="btn btn-danger" onClick={() => this.props.deleteRecipe(this.props.data.name, this.props.data.ingredients, this.props.index)}>Delete</button>
+              <button className="btn btn-danger" onClick={() => this.props.deleteRecipe(this.props.index)}>Delete</button>
               <button className="btn btn-info">Edit</button>
             </Well>
           </div>
