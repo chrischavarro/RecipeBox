@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getRecipes } from '../actions';
 import Recipe from './recipe';
+import _ from 'lodash';
 
 class RecipeList extends Component {
   constructor(props) {
@@ -11,22 +12,26 @@ class RecipeList extends Component {
 
   componentDidMount() {
       {this.props.getRecipes}
-      for (var length in localStorage) {
-        console.log(length + ':' + localStorage[length].name)
-      }
   }
 
-  renderRecipes(recipe, index) {
-    return (
-      <Recipe data={recipe} index={index} key={recipe.name} />
-    )
+  renderRecipes() {
+    return _.map(this.props.recipes), recipe => {
+      console.log(recipe)
+    }
+
   }
+  // renderRecipes(recipe, index) {
+  //   console.log(recipe.index);
+  //   return (
+  //     <Recipe data={recipe} index={index} key={recipe.name} />
+  //   )
+  // }
 
   render() {
     return (
       <div>
         <div className="col-sm-10">
-            {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}
+            {this.renderRecipes()}
         </div>
       </div>
     )
@@ -40,3 +45,4 @@ function mapStateToProps(state) {
 }
 
 export default connect (mapStateToProps, { getRecipes })(RecipeList);
+// {this.props.recipes.map((recipe, index) => this.renderRecipes(recipe,index))}

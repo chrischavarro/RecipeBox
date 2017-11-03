@@ -1,15 +1,32 @@
 import axios from 'axios'
-export const FETCH_RECIPES = 'FETCH_RECIPES'
+export const FETCH_RECIPES = 'FETCH_RECIPES';
+export const DELETE_RECIPE = 'DELETE_RECIPE';
 // let indexer = 1;
 
 export function getRecipes(name, ingredients) {
   const request = {
     name: name,
-    ingredients: ingredients.split(',')
+    ingredients: ingredients.split(','),
+    key: name
   };
+
+  // localStorage.setItem(request.key, request);
 
   return {
     type: FETCH_RECIPES,
+    payload: request
+  }
+}
+
+export function deleteRecipe(name, ingredients) {
+  const request = {
+    name: name,
+    ingredients: ingredients,
+    key: name
+  };
+
+  return {
+    type: DELETE_RECIPE,
     payload: request
   }
 }

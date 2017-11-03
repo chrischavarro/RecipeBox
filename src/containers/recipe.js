@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Well } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { deleteRecipe } from '../actions';
 
 class Recipe extends Component {
   constructor(props) {
@@ -10,7 +12,7 @@ class Recipe extends Component {
   }
   renderIngredients(ingredient, index) {
     return (
-      <li key={index}>
+      <li key={index} className="list-group-item">
       {ingredient}
       </li>
     )
@@ -22,9 +24,11 @@ class Recipe extends Component {
         <Collapse in={this.state.open}>
           <div className="ingredient-dropdown">
             <Well>
-              <ul>
+              <ul className="list-group">
                 {this.props.data.ingredients.map((ingredient, index) => this.renderIngredients(ingredient, index))}
               </ul>
+              <button className="btn btn-danger" onClick={() => this.props.deleteRecipe(this.props.data.name, this.props.data.ingredients)}>Delete</button>
+              <button className="btn btn-info">Edit</button>
             </Well>
           </div>
         </Collapse>
@@ -33,4 +37,4 @@ class Recipe extends Component {
   };
 }
 
-export default Recipe;
+export default connect (null, { deleteRecipe })(Recipe);

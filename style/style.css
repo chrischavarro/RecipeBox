@@ -1,3 +1,20 @@
+ul {
+  list-style-type: none!important;
+}
+
+a {
+  color: #B75D69!important;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  color: #774C60!important;
+  text-decoration: none!important;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
 .header {
   font-size: 24pt!important;
   text-align: center;
@@ -19,6 +36,10 @@
   background-color: #372549;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
+  font-size: 22pt;
+  font-weight: 500;
+
 }
 
 .ingredient-dropdown {
@@ -26,25 +47,6 @@
   color: #EACDC2;
 }
 
-ul {
-  list-style-type: none!important;
-}
-
-a {
-  color: #B75D69!important;
-  text-decoration: none;
-  text-align: center;
-}
-
-a:hover {
-  color: #774C60!important;
-  text-decoration: none!important;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.recipe {
-  text-align: center;
-  font-size: 22pt;
-  font-weight: 500;
+.ingredient-row {
+  border: 1px solid black;
 }
