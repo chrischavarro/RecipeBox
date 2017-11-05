@@ -27,7 +27,7 @@ export function deleteRecipe(index) {
 export function editRecipe(name, ingredients, index) {
   const request = {
     name: name,
-    ingredients: ingredients,
+    ingredients: ingredients.split(','),
     index: index
   }
 

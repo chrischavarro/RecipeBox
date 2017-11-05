@@ -23,6 +23,7 @@ class Recipe extends Component {
 
   openModal() {
     this.setState({ modalOpen: true});
+    console.log(this.props.data)
   }
 
   closeModal() {
@@ -35,11 +36,11 @@ class Recipe extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
-    console.log('Recieved submit')
-    this.props.editRecipe(this.props.data.name, this.props.data.ingredients, this.props.index)
+    console.log('Recieved submit', this.state.recipeIngredients)
+    this.props.editRecipe(this.state.recipeName, this.state.recipeIngredients, this.props.index)
     // this.props.getRecipes(this.state.recipeName, this.state.recipeIngredients);
     // this.setState({ recipeName: '', recipeIngredients:'' });
-    // this.closeModal();
+    this.closeModal();
   }
 
   renderIngredients(ingredient, index) {
