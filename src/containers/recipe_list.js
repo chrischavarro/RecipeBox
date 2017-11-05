@@ -13,13 +13,7 @@ class RecipeList extends Component {
   componentDidMount() {
       {this.props.getRecipes}
   }
-
-  // renderRecipes() {
-  //   return _.map(this.props.recipes), recipe => {
-  //     console.log(recipe)
-  //   }
-  //
-  // }
+ 
   renderRecipes(recipe, index) {
     console.log(this.props.recipes)
     return (
